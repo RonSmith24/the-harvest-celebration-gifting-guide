@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Harvest Celebration &amp; Gifting Guide (Student Concept)</title>
+<meta name="description" content="Student portfolio concept: a free planning guide for birthdays, family gatherings, office events, and gifts. Not affiliated with The Harvest.">
+<style>
+  :root {
+    --forest: #183F35;
+    --deep: #285B4D;
+    --cream: #F8F5ED;
+    --paper: #FFFDF8;
+    --gold: #B89455;
+    --pale-gold: #DDC18C;
+    --text: #29342E;
+    --muted: #69736D;
+    --border: #E7E0D2;
+    --footer: #F0EADF;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Arial, Helvetica, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; background: var(--cream); color: var(--text); font-family: var(--serif); line-height: 1.7; font-size: 1.0625rem; overflow-x: hidden; }
+  h1, h2, h3 { font-family: var(--serif); color: var(--forest); line-height: 1.15; margin: 0; font-weight: 400; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .container { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+  .eyebrow { font-family: var(--sans); font-size: .75rem; font-weight: 700; letter-spacing: .16em; color: var(--gold); margin-bottom: 1rem; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: .9rem 2rem; font-family: var(--sans); font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-decoration: none; border: 2px solid var(--forest); background: var(--forest); color: var(--paper); border-radius: 2px; cursor: pointer; transition: background .2s, color .2s; }
+  .btn:hover { background: var(--deep); border-color: var(--deep); }
+  .btn:disabled { opacity: .6; cursor: not-allowed; }
+  .btn--light { background: var(--pale-gold); border-color: var(--pale-gold); color: var(--forest); }
+  .btn--light:hover { background: var(--paper); border-color: var(--paper); }
+  .btn--small { min-height: 2.5rem; padding: .5rem 1.1rem; }
+
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 10; background: var(--cream); border-bottom: 1px solid var(--border); }
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; }
+  .brand { text-decoration: none; display: block; }
+  .brand__mark { display: block; font-size: 1.5rem; letter-spacing: .28em; color: var(--forest); line-height: 1.1; }
+  .brand__sub { display: block; font-family: var(--sans); font-size: .625rem; letter-spacing: .2em; color: var(--muted); margin-top: .25rem; }
+
+  /* Hero */
+  .hero { padding: 3.5rem 0 4.5rem; }
+  .hero__grid { display: grid; gap: 3rem; align-items: center; }
+  .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 1.5rem; }
+  .hero__lead { font-size: 1.25rem; color: var(--text); max-width: 34rem; margin-bottom: 2rem; }
+  .hero__micro { font-family: var(--sans); font-size: .875rem; color: var(--muted); margin-top: 1.25rem; max-width: 30rem; }
+  .hero__art { display: flex; justify-content: center; }
+
+  /* CSS cake illustration */
+  .cake { position: relative; width: min(320px, 80vw); aspect-ratio: 1; background: var(--paper); border: 1px solid var(--border); border-radius: 50%; }
+  .cake > * { position: absolute; left: 50%; transform: translateX(-50%); }
+  .cake__plate { bottom: 17%; width: 78%; height: 5%; background: var(--pale-gold); border-radius: 50%; }
+  .cake__tier { border-radius: 6px 6px 3px 3px; background: var(--forest); }
+  .cake__tier--base { bottom: 21%; width: 58%; height: 20%; }
+  .cake__tier--top { bottom: 41%; width: 40%; height: 16%; background: var(--deep); }
+  .cake__icing { bottom: 38.5%; width: 60%; height: 4.5%; background: var(--pale-gold); border-radius: 999px; }
+  .cake__icing--top { bottom: 55%; width: 42%; }
+  .cake__candle { bottom: 58%; width: 2.2%; height: 12%; background: var(--gold); border-radius: 2px; }
+  .cake__flame { bottom: 69.5%; width: 4%; height: 6.5%; background: var(--pale-gold); border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%; }
+
+  /* Benefits */
+  .benefits { padding: 4.5rem 0; background: var(--paper); border-block: 1px solid var(--border); }
+  .benefits__head { max-width: 42rem; margin-bottom: 3rem; }
+  .benefits__head h2 { font-size: clamp(1.9rem, 5vw, 2.75rem); margin-bottom: 1.25rem; }
+  .benefits__head p { color: var(--muted); }
+  .cards { display: grid; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+  .card { background: var(--cream); border: 1px solid var(--border); padding: 2rem; display: flex; flex-direction: column; }
+  .card__num { font-family: var(--sans); font-size: .75rem; font-weight: 700; letter-spacing: .16em; color: var(--gold); margin-bottom: 1.25rem; }
+  .card h3 { font-size: 1.5rem; margin-bottom: .9rem; }
+  .card p { color: var(--muted); font-size: 1rem; }
+
+  /* Lead capture */
+  .lead { background: var(--forest); color: var(--paper); padding: 5rem 0; text-align: center; }
+  .lead .eyebrow { color: var(--pale-gold); }
+  .lead h2 { color: var(--paper); font-size: clamp(1.9rem, 5vw, 2.75rem); margin-bottom: 1rem; }
+  .lead__intro { color: var(--border); margin-bottom: 2.5rem; }
+  .form-box { background: var(--paper); color: var(--text); max-width: 34rem; margin-inline: auto; padding: 2rem; text-align: left; border-radius: 2px; }
+  .demo-notice { font-family: var(--sans); font-size: .8125rem; background: var(--footer); border: 1px solid var(--pale-gold); padding: .75rem 1rem; margin-bottom: 1.5rem; color: var(--text); }
+  .field { margin-bottom: 1.25rem; }
+  .field label { display: block; font-family: var(--sans); font-size: .875rem; font-weight: 700; margin-bottom: .4rem; color: var(--forest); }
+  .field input[type="text"], .field input[type="email"] { width: 100%; min-height: 3rem; padding: .7rem .9rem; font: 1rem var(--sans); color: var(--text); background: #fff; border: 1px solid #8a9490; border-radius: 2px; }
+  .field input[aria-invalid="true"] { border-color: #9b2c2c; border-width: 2px; }
+  .field__error { font-family: var(--sans); font-size: .8125rem; color: #9b2c2c; margin-top: .35rem; min-height: 1.1em; }
+  .consent { display: flex; gap: .75rem; align-items: flex-start; }
+  .consent input { width: 1.25rem; height: 1.25rem; margin-top: .2rem; flex: none; accent-color: var(--forest); }
+  .consent label { font-family: var(--sans); font-size: .875rem; font-weight: 400; color: var(--text); margin: 0; line-height: 1.5; }
+  .form-box .btn { width: 100%; margin-top: .75rem; }
+  .form-status { font-family: var(--sans); font-size: .9rem; margin-top: 1.25rem; padding: 0; }
+  .form-status:not(:empty) { padding: .85rem 1rem; border-left: 4px solid var(--forest); background: var(--footer); }
+  .form-status.is-error { border-left-color: #9b2c2c; color: #7a2020; }
+
+  /* Closing CTA */
+  .closing { padding: 5rem 0; text-align: center; }
+  .closing h2 { font-size: clamp(1.9rem, 5vw, 2.75rem); margin-bottom: 1.25rem; }
+  .closing p { color: var(--muted); max-width: 32rem; margin: 0 auto 2rem; }
+
+  /* Footer */
+  .site-footer { background: var(--footer); border-top: 1px solid var(--border); padding: 2rem 0; font-family: var(--sans); font-size: .8125rem; color: var(--muted); text-align: center; line-height: 1.6; }
+  .site-footer p + p { margin-top: .4rem; }
+
+  @media (min-width: 768px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .hero__grid { grid-template-columns: 1.15fr .85fr; }
+    .form-box { padding: 2.5rem; }
+  }
+  @media (max-width: 480px) {
+    .brand__mark { font-size: 1.2rem; letter-spacing: .2em; }
+    .btn--small { padding-inline: .8rem; letter-spacing: .06em; }
+    .hero .btn { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top" aria-label="The Harvest Celebration and Gifting Guide, back to top">
+      <span class="brand__mark">THE HARVEST</span>
+      <span class="brand__sub">CELEBRATION &amp; GIFTING GUIDE</span>
+    </a>
+    <a class="btn btn--small" href="#guide-form">GET THE GUIDE</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div>
+        <h1 id="hero-title">Celebrate Beautifully. Gift Thoughtfully.</h1>
+        <p class="hero__lead">Make your next celebration more memorable with dessert inspiration, a practical planning checklist, and thoughtful gifting ideas.</p>
+        <a class="btn" href="#guide-form">GET THE FREE GUIDE</a>
+        <p class="hero__micro">A free planning resource for birthdays, family gatherings, office events, and gifts.</p>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="cake">
+          <span class="cake__plate"></span>
+          <span class="cake__tier cake__tier--base"></span>
+          <span class="cake__icing"></span>
+          <span class="cake__tier cake__tier--top"></span>
+          <span class="cake__icing cake__icing--top"></span>
+          <span class="cake__candle"></span>
+          <span class="cake__flame"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" aria-labelledby="benefits-title">
+    <div class="container">
+      <div class="benefits__head">
+        <p class="eyebrow">INSIDE THE GUIDE</p>
+        <h2 id="benefits-title">Thoughtful details make every occasion special.</h2>
+        <p>Whether planning a small gathering or preparing a gift, use this guide to organize your ideas and feel more confident about the details.</p>
+      </div>
+      <ul class="cards">
+        <li class="card">
+          <p class="card__num">01 / CELEBRATE</p>
+          <h3>Dessert &amp; Celebration Ideas</h3>
+          <p>Find inspiration for birthdays, family moments, and office celebrations, with ideas to help match the occasion.</p>
+        </li>
+        <li class="card">
+          <p class="card__num">02 / PLAN</p>
+          <h3>A Simple Event Checklist</h3>
+          <p>Keep essentials in view, from guest numbers and timing to choosing what you want to serve.</p>
+        </li>
+        <li class="card">
+          <p class="card__num">03 / GIFT</p>
+          <h3>Gifting &amp; Preparation Tips</h3>
+          <p>Explore thoughtful gift ideas and practical details to consider before placing an order.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lead" id="guide-form" aria-labelledby="lead-title">
+    <div class="container">
+      <p class="eyebrow">YOUR NEXT CELEBRATION STARTS HERE</p>
+      <h2 id="lead-title">Get your free Celebration &amp; Gifting Guide.</h2>
+      <p class="lead__intro">Enter your details to request the guide.</p>
+
+      <div class="form-box">
+        <p class="demo-notice"><strong>Demo mode:</strong> this form is a visual demonstration only. Nothing you type is sent or stored, and no guide will be delivered.</p>
+
+        <form id="lead-form" novalidate>
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="name" autocomplete="name" required aria-describedby="name-error">
+            <p class="field__error" id="name-error"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <p class="field__error" id="email-error"></p>
+          </div>
+          <div class="field">
+            <div class="consent">
+              <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
+              <label for="consent">I agree to be contacted about this guide and understand that my information should be handled according to the site's privacy policy.</label>
+            </div>
+            <p class="field__error" id="consent-error"></p>
+          </div>
+          <button type="submit" class="btn btn--light" id="submit-btn">REQUEST MY FREE GUIDE</button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="container">
+      <h2 id="closing-title">Make room for moments that matter.</h2>
+      <p>For official products and current information, visit The Harvest's official website.</p>
+      <a class="btn" href="https://www.harvestcakes.com/" target="_blank" rel="noopener noreferrer">VISIT THE HARVEST WEBSITE</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Student project concept for lead-generation practice. Not affiliated with or endorsed by The Harvest.</p>
+    <p>Verify product details, prices, promotions, and availability directly with the official brand.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('lead-form');
+    var statusBox = document.getElementById('form-status');
+    var submitBtn = document.getElementById('submit-btn');
+    var fields = {
+      name: { el: document.getElementById('full-name'), err: document.getElementById('name-error') },
+      email: { el: document.getElementById('email'), err: document.getElementById('email-error') },
+      consent: { el: document.getElementById('consent'), err: document.getElementById('consent-error') }
+    };
+
+    // Per-field validation. Returns an error message, or '' when valid.
+    function check(key) {
+      var el = fields[key].el;
+      if (key === 'name') return el.value.trim().length < 2 ? 'Enter your full name.' : '';
+      if (key === 'email') {
+        var v = el.value.trim();
+        if (!v) return 'Enter your email address.';
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? '' : 'Enter a valid email address, for example name@example.com.';
+      }
+      return el.checked ? '' : 'Please tick the consent box to continue.';
+    }
+
+    function show(key, msg) {
+      fields[key].err.textContent = msg;
+      if (msg) fields[key].el.setAttribute('aria-invalid', 'true');
+      else fields[key].el.removeAttribute('aria-invalid');
+    }
+
+    ['name', 'email'].forEach(function (key) {
+      fields[key].el.addEventListener('blur', function () { show(key, check(key)); });
+    });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      statusBox.className = 'form-status';
+      statusBox.textContent = '';
+
+      var firstInvalid = null;
+      Object.keys(fields).forEach(function (key) {
+        var msg = check(key);
+        show(key, msg);
+        if (msg && !firstInvalid) firstInvalid = fields[key].el;
+      });
+
+      if (firstInvalid) {
+        statusBox.className = 'form-status is-error';
+        statusBox.textContent = 'Please fix the highlighted fields and try again.';
+        firstInvalid.focus();
+        return;
+      }
+
+      // Block double submission while a request is in flight.
+      submitBtn.disabled = true;
+
+      /*
+        ==== CONNECT A REAL FORM SERVICE OR BACKEND HERE ====
+        This is DEMO MODE: nothing is sent or stored.
+        To capture real leads, replace the block below with a request to
+        an endpoint YOU own or have signed up for (for example a form
+        service such as Formspree, or your own server). Example shape:
+
+          fetch(YOUR_ENDPOINT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: ..., email: ..., consent: true })
+          }).then(function (r) { if (!r.ok) throw new Error(); ... })
+
+        Only show a success message after the service confirms (r.ok).
+        Never put API secrets in this file; use a service's public form
+        URL or a server-side function. Also link a real privacy policy.
+      */
+
+      statusBox.textContent = 'Demo only: your details passed validation, but nothing was sent or stored and no guide was delivered.';
+      form.reset();
+      submitBtn.disabled = false;
+    });
+  })();
+</script>
+</body>
+</html>
